@@ -1,3 +1,26 @@
 <%= provide(:title,'Sign Up') %>
-<h1>Sign Up</h1>
-<p>signup for new users</p>
+
+<div class="container jumbotron">
+  <h1 class="center">Sign Up</h1>
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= form_for(@user, url: signup_path ) do |f| %>
+       <%= render 'shared/error_messages' %>
+        <%= f.label :name %>
+        <%= f.text_field :name %>
+     <%= render 'shared/error_messages_name' %>
+        <%= f.label :email %>
+        <%= f.email_field :email %>
+     <%= render 'shared/error_messages_email' %>
+        <%= f.label :password %>
+        <%= f.password_field :password %>
+      <%= render 'shared/error_messages_password' %>
+        <%= f.label :password_confirmation , "Re-enter Password" %>
+        <%= f.password_field :password_confirmation %>
+      <%= render 'shared/error_messages_password_confirmation' %>
+      <%= f.submit "Sign up" , class: "btn btn-secondary btn-lg btn-block"%>
+    <% end %>
+  </div>
+</div>
+
+</div>
