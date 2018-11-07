@@ -1,0 +1,24 @@
+<% provide(:title,"Log In")  %>
+
+<div class="container">
+  <div class="jumbotron col-md-8 offset-md-2 ">
+  <h1 class="center">Log in</h1>
+  <div class="row">
+    <%= form_for(:session, url:login_path) do |f| %>
+
+      <%= f.label :email %>
+      <%= f.email_field :email  %>
+
+      <%= f.label :password %>
+      <%= f.password_field :password %>
+
+      <%= f.submit "Log In" , class: "btn btn-secondary btn-lg btn-block" %>
+
+    <% end %>
+
+    <p>New user ? <%= link_to "Signup now", signup_path %> </p>
+  </div>
+  </div>
+</div>
+
+

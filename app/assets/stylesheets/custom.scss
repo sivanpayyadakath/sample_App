@@ -16,6 +16,9 @@ $light-gray: #777;
 .jumbotron{
   background-color: -moz-mac-accentlightshadow;
   //text-shadow: black 0.2em 0.2em 0.2em;
+  margin-top: 30px;
+  top: 15%;
+  left:15%;
 }
 
 #logo {
@@ -103,11 +106,6 @@ footer {
   margin-top: 15px;
 }
 
-img{
-  border: 4px solid $light-gray;
-  border-radius: 50%;
-  height: 120px;
-}
 
 aside{
   section.user-info{
@@ -116,6 +114,12 @@ aside{
     font-size: 3em;
     letter-spacing: -1px;
     text-align: left;
+  }
+
+  img{
+    border: 4px solid $light-gray;
+    border-radius: 50%;
+    height: 120px;
   }
 }
 
@@ -143,4 +147,19 @@ button{
   color:indianred;
   margin-bottom: 10px;
   font-size: -1em;
+}
+
+.user-dp-style{
+  img {
+    border: 2px solid $light-gray;
+    border-radius: 50%;
+    height: 30px;
+  }
+    }
+
+
+body {
+  background-image: image-url('a.jpg');
+  background-size: 100%;
+
 }
