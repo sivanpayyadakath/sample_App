@@ -19,6 +19,11 @@ $light-gray: #777;
   margin-top: 30px;
   top: 15%;
   left:15%;
+  img{
+    border: 2px solid $light-gray;
+    width:25%;
+    border-radius:50%
+  }
 }
 
 #logo {
@@ -171,3 +176,19 @@ body {
   margin:auto;
   height: 1em;
 }
+
+.users {
+  list-style: none;
+  margin: 0;
+  li {
+    overflow: auto;
+    padding: 10px 0;
+    border-bottom: 1px solid $gray-lighter;
+    a {
+      text-decoration: none;
+      text-transform: capitalize;
+      font-size:2em;
+    }
+  }
+}
+

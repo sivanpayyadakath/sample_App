@@ -1,0 +1,35 @@
+<% provide(:title, "Edit user") %>
+
+<div class="container jumbotron">
+  <div class="card text-center">
+    <div class="card-body">
+      <h5 class="card-title"><%= gravatar_for @user%></h5>
+      <p class="card-text"><a href="http://gravatar.com/emails" target="_blank"><%= @user.name%></a></p>
+    </div>
+  </div>
+  <h1 class="center"> Update your profile</h1>
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+
+    <%= form_for(@user) do |f| %>
+      <%= render 'shared/error_messages', object: @user %>
+      <%= f.label :name %>
+      <%= f.text_field :name %>
+      <%= render 'shared/error_messages_name' , object: @user%>
+      <%= f.label :email %>
+      <%= f.email_field :email %>
+      <%= render 'shared/error_messages_email' , object: @user%>
+      <%= f.label :password %>
+      <%= f.password_field :password %>
+      <%= render 'shared/error_messages_password', object: @user  %>
+      <%= f.label :password_confirmation , "Re-enter Password" %>
+      <%= f.password_field :password_confirmation %>
+      <%= render 'shared/error_messages_password_confirmation' , object: @user%>
+
+      <%= f.submit "Save changes", class: "btn btn-secondary" %>
+    <% end %>
+
+    </div>
+  </div>
+</div>
+

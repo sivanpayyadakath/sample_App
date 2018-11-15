@@ -1,0 +1,15 @@
+<% provide(:title, 'All users') %>
+
+
+<div class="users jumbotron">
+  <h1 class="center" >All Users</h1>
+
+  <%= will_paginate %>
+
+  <% @users.each do |user| %>
+    <%= render user %>
+  <% end %>
+
+  <% will_paginate %>
+
+</div>
