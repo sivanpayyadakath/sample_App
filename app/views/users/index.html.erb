@@ -7,7 +7,9 @@
   <%= will_paginate %>
 
   <% @users.each do |user| %>
-    <%= render user %>
+    <% if user.activated? %>
+      <%= render user %>
+    <% end %>
   <% end %>
 
   <% will_paginate %>
