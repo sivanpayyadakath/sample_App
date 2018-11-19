@@ -59,14 +59,6 @@ body{
   padding-top: 60px; //navabar is fixed at top
 }
 
-//section {
-//  overflow: auto;
-//}
-
-//img{
-//  display: none;
-//}
-
 footer {
   margin-top: 40px;
   border-top: 1px solid #2E2F30;
@@ -146,6 +138,7 @@ button{
 }
 .btn-secondary{
   background-color: $light-gray !important;
+  margin-top: 10px;
 }
 
 .error_msg{
@@ -189,5 +182,12 @@ body {
       text-transform: capitalize;
       font-size:2em;
     }
+  }
+}
+
+.form-inline{
+  a {
+    float: right;
+    padding-right: 10px;
   }
 }
