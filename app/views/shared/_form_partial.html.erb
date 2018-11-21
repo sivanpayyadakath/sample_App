@@ -4,19 +4,19 @@
   <div class="row">
     <div class="col-md-6 col-md-offset-3">
       <%= form_for(@user , url: yield(:path_get) ) do |f| %>
-        <%= render 'shared/error_messages' %>
+        <%= render 'shared/error_messages', object: f.object %>
         <%= f.label :name %>
         <%= f.text_field :name %>
-        <%= render 'shared/error_messages_name' %>
+        <%= render 'shared/error_messages_name', object: f.object  %>
         <%= f.label :email %>
         <%= f.email_field :email %>
-        <%= render 'shared/error_messages_email' %>
+        <%= render 'shared/error_messages_email', object: f.object  %>
         <%= f.label :password %>
         <%= f.password_field :password %>
-        <%= render 'shared/error_messages_password'  %>
+        <%= render 'shared/error_messages_password', object: f.object   %>
         <%= f.label :password_confirmation , "Re-enter Password" %>
         <%= f.password_field :password_confirmation %>
-        <%= render 'shared/error_messages_password_confirmation' , object: @user%>
+        <%= render 'shared/error_messages_password_confirmation' , object: f.object %>
         <%= f.submit yield(:button_text), class: "btn btn-secondary btn-lg btn-block"%>
       <% end %>
     </div>
