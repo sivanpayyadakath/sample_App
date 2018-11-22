@@ -2,24 +2,30 @@
 <div class="container">
   <div class="row jumbotron">
     <aside class="col-xs-5">
-      <section class = "user-info">
+      <section>
         <h1>
           <%= gravatar_for @user %>
           <div><small><%= @user.name %></small></div></h1>
         <h3><small><%= @user.email %></small></h3>
       </section>
+        <section class="stats">
+          <%= render 'shared/stats' %>
+        </section>
+        <section>
+          <%= render 'follow_form' if logged_in? %>
+        </section>
     </aside>
     <div class="col-xs-7 ">
       <% if @user.microposts.any? %>
         <div class="row">
-          <h2 style="text-decoration-line: underline;color:#777777">Microposts (<%= @user.microposts.count %>)</h2>
+          <h2 style="text-decoration-line: underline;color:#777777; text-align: center">Microposts (<%= @user.microposts.count %>)</h2>
         <ol class="microposts">
           <%= render @microposts %>
         </ol>
         </div>
       <% end %>
     </div>
-    <div class="center">
+    <div class="text-center">
       <%= will_paginate @microposts %>
     </div>
   </div>

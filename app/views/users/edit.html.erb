@@ -1,9 +1,9 @@
 <% provide(:title, "Edit user") %>
 
 <div class="container jumbotron">
-  <div class="card text-center">
-    <div class="card-body">
-      <h5 class="card-title"><%= gravatar_for @user%></h5>
+  <div class="text-center">
+    <div>
+      <h5><%= gravatar_for @user%></h5>
       <p class="card-text"><a href="http://gravatar.com/emails" target="_blank"><%= @user.name%></a></p>
     </div>
   </div>
