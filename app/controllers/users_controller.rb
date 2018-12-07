@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
 
-  before_action :logged_in_user, only: [  :edit,  :update,  :index, :destroy, :following, :followers]
+  before_action :logged_in_user, only: [  :edit,  :update,  :index, :destroy, :following, :followers, :show]
   before_action :correct_user, only: [  :edit,  :update]
   before_action :admin_user, only: :destroy
 
@@ -11,6 +11,7 @@ class UsersController < ApplicationController
   def index
     @users = User.paginate(page: params[:page], per_page: 10)
   end
+
   def show
     @user = User.find(params[:id])
     @microposts = @user.microposts.paginate(page: params[:page], per_page: 5)
